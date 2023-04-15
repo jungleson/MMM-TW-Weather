@@ -1,12 +1,8 @@
-# MMM-WeatherChart
+# MMM-TW-Weather
 
 Hourly Forecast (temperature, weather icons on the top, rain volume on the bottom)
 
 ![image](https://user-images.githubusercontent.com/48573325/94290828-b0d23e80-ff95-11ea-8c32-b9c4b13d2b8a.png)
-
-Daily Forecast (max and min temperature, weather icons on the top, rain volume (include snow) on the bottom)
-
-![image](https://user-images.githubusercontent.com/48573325/102897630-abf52c00-44ab-11eb-9baa-224532511f65.png)
 
 MagicMirror module for displaying weather forecasts from [OpenWeather](https://openweathermap.org/). Weather forecasts are displayed by using [Chart.js](https://www.chartjs.org/), an open-source free library for drawing charts.
 
@@ -18,16 +14,16 @@ Clone this repository and place it on MagicMirror module directory.
 
 ```
 $ cd ~/MagicMirror/modules
-$ git clone https://github.com/mtatsuma/MMM-WeatherChart.git
+$ git clone https://github.com/jungleson/MMM-TW-Weather.git
 ```
 
 or if you want to use an old version, clone it with the version.
 ```
 $ cd ~/MagicMirror/modules
-$ git clone -b <version> https://github.com/mtatsuma/MMM-WeatherChart.git
+$ git clone -b <version> https://github.com/jungleson/MMM-TW-Weather.git
 ```
 
-You can check [available MMM-WeatherChart versions](https://github.com/mtatsuma/MMM-WeatherChart/releases).
+You can check [available MMM-WeatherChart versions](https://github.com/jungleson/MMM-TW-Weather/releases).
 
 ## Configuration
 
@@ -36,21 +32,16 @@ You can check [available MMM-WeatherChart versions](https://github.com/mtatsuma/
 ```
    modules: [
         {
-            "module": "MMM-WeatherChart",
-            "position": "top_right",
-            "config": {
-                "apiKey": "xxxx",
-                "dataNum": 12,
-                "dataType": "hourly",
-                "height": "500px",
-                "width": "800px",
-                "lat": 35.571337,
-                "lon": 139.633989,
-                "units": "metric",
-                "showRain": true,
-                "includeSnow": true,
-                "showSnow": true,
-                "showIcon": true
+            module: "MMM-TW-Weather",
+            header: "Weather Forecast",
+            position: "top_right",
+            config: {
+                apiKey: "<your-openweather-api_key>",
+                dataid: "F-D0047-053",
+                locationName: "東區",
+                dataNum: 12,
+                height: "250px",
+                width: "350px",
             }
         }
    ]
@@ -90,10 +81,6 @@ You can check [available MMM-WeatherChart versions](https://github.com/mtatsuma/
 | showSnow | | `false` | Show snow volume line in the rain volume chart. If you enable both of showRain and showSnow, datalabels for snow volume is not appeared because those can overlap with the rain volume datalabels. |
 | showZeroSnow | | `true` | Show snow chart even when there is no snow volume. This option is effective only when `showSnow` is true. |
 | color | | `rgba(255, 255, 255, 1)` | Color of line and letters |
-| colorMin | | `rgba(255, 255, 255, 1)` | Color of the minimum temperature line e.g. yellow |
-| colorMax | | `rgba(255, 255, 255, 1)` | Color of the maximum temperature line e.g. orange |
-| colorRain | | `rgba(255, 255, 255, 1)` | Color of the rain line e.g. blue |
-| colorSnow | | `rgba(255, 255, 255, 1)` | Color of the snow line |
 | backgroundColor | | `rgba(0, 0, 0, 0)` | Color of background |
 | fillColor | | `rgba(255, 255, 255, 0.1)` | Color for filling rain volume line |
 | dailyLabel | | `date` | Label of x-axis for the daily forecast chart. The available labels are `date` or `days_of_week` or `date+days_of_week` |
