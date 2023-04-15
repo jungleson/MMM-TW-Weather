@@ -13,13 +13,13 @@ Module.register("MMM-WeatherChart", {
     defaults: {
         updateInterval: 10 * 60 * 1000,
         retryDelay: 5000,
-		apiBase: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/",
+	apiBase: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/",
         apiKey: "",
 
-		dataid: "",
-		locationName: "",
-		elementName: "",
-		format: "JSON",
+	dataid: "",
+	locationName: "",
+	elementName: "",
+	format: "JSON",
 
         units: "standard",
         lang: "en",
@@ -29,7 +29,7 @@ Module.register("MMM-WeatherChart", {
         width: "500px",
         fontSize: 16,
         fontWeight: "normal",
-        dataNum: 24,
+        dataNum: 12,
         title: "Taiwan Weather Forecast",
         // https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/night/01.svg
         iconURLBase: "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/",
@@ -135,7 +135,7 @@ Module.register("MMM-WeatherChart", {
 
     getIconImage: function (iconId, hour) {
         let self = this;
-        let iconImage = new Image(25, 25);
+        let iconImage = new Image(20, 20);
         if (hour < 6 || hour >= 18) {
             iconImage.src = this.config.iconURLBase + "night/" + iconId + ".svg";
         } else {
