@@ -1,6 +1,6 @@
 # MMM-TW-Weather
 
-Hourly Forecast (temperature, weather icons on the top, chance of rain on the bottom)
+Hourly Forecast (temperature, weather icons on the top, chance of rain on the bottom) of Taiwan City
 
 ![image](./screenshot.jpg)
 
@@ -31,10 +31,10 @@ $ git clone -b <version> https://github.com/jungleson/MMM-TW-Weather.git
    modules: [
         {
             module: "MMM-TW-Weather",
-            header: "Weather Forecast",
+            header: "Taiwan Weather Forecast",
             position: "top_right",
             config: {
-                apiKey: "<your-openweather-api_key>",
+                apiKey: "<your-opendata-api_key>",
                 dataid: "F-D0047-053",
                 locationName: "東區",
                 dataNum: 12,
@@ -50,10 +50,10 @@ $ git clone -b <version> https://github.com/jungleson/MMM-TW-Weather.git
 | Options | Required | Default | Description |
 |:--------|:--------:|:--------|:------------|
 | apiKey | yes | | API key to call [Opendata](https://opendata.cwb.gov.tw/) API. You can get the API key by signing up [Opendata]([https://openweathermap.org](https://opendata.cwb.gov.tw/). |
+| dataid | yes | `F-D0047-053` | ID of the Taiwan city |
+| locationid | yes | `東區` | Taiwan District name |
+| title | | `Weather Forecast` | Title of the chart to display |
 | height | | `300px` | Height of the chart area in px |
 | width | | `500px` | Width of the chart area in px |
-| title | | `Weather Forecast` | Title of the chart to display |
-| dataid | | `F-D0047-053` | ID of the Taiwan city |
-| locationid | | `東區` | Taiwan District name |
 
 
