@@ -53,7 +53,7 @@ $ git clone -b <version> https://github.com/jungleson/MMM-TW-Weather.git
 | height | | `300px` | Height of the chart area in px |
 | width | | `500px` | Width of the chart area in px |
 | title | | `Weather Forecast` | Title of the chart to display |
-| dataid | | `F-D0047-053` | ID of the city |
-| locationid | | `東區` | District name |
+| dataid | | `F-D0047-053` | ID of the Taiwan city |
+| locationid | | `東區` | Taiwan District name |
 
 
