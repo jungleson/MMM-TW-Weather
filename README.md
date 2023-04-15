@@ -1,12 +1,12 @@
 # MMM-TW-Weather
 
-Hourly Forecast (temperature, weather icons on the top, rain volume on the bottom)
+Hourly Forecast (temperature, weather icons on the top, chance of rain on the bottom)
 
 ![image](./screenshot.jpg)
 
-MagicMirror module for displaying weather forecasts from [OpenWeather](https://openweathermap.org/). Weather forecasts are displayed by using [Chart.js](https://www.chartjs.org/), an open-source free library for drawing charts.
+MagicMirror module for displaying weather forecasts from [Taiwan Central Weather Bureau](https://www.cwb.gov.tw/eng/). Weather forecasts are displayed by using [Chart.js](https://www.chartjs.org/), an open-source free library for drawing charts.
 
-This module can work with free OpenWeather API, which only requires to sign up and get an API key.
+This module can work with free opendata API, which only requires to sign up and get an API key from [Open Weather Data](https://opendata.cwb.gov.tw/index).
 
 ## Installation
 
@@ -49,7 +49,7 @@ $ git clone -b <version> https://github.com/jungleson/MMM-TW-Weather.git
 
 | Options | Required | Default | Description |
 |:--------|:--------:|:--------|:------------|
-| apiKey | yes | | API key to call [OpenWeather](https://openweathermap.org/) API. You can get the API key by signing up [OpenWeather](https://openweathermap.org/). |
+| apiKey | yes | | API key to call [Opendata](https://opendata.cwb.gov.tw/) API. You can get the API key by signing up [Opendata]([https://openweathermap.org](https://opendata.cwb.gov.tw/). |
 | height | | `300px` | Height of the chart area in px |
 | width | | `500px` | Width of the chart area in px |
 | title | | `Weather Forecast` | Title of the chart to display |
